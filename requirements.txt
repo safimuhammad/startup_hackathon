@@ -6,3 +6,4 @@ langchain
 bs4
 tiktoken
 langchain-experimental
+faiss-cpu
