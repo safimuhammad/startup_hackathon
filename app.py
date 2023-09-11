@@ -38,9 +38,15 @@ import os
 from langchain.chains import RetrievalQA, SimpleSequentialChain
 import faiss
 
-load_dotenv()
-brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
-serper_api_key = os.getenv("SERP_API_KEY")
+if st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets['OPENAI_API_KEY']
+    os.environ["BROWSERLESS_API_KEY"] = st.secrets['BROWSERLESS_API_KEY']
+    os.environ["SERP_API_KEY"] = st.secrets['SERP_API_KEY']
+
+
+# load_dotenv()
+# brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
+# serper_api_key = os.getenv("SERP_API_KEY")
 
 
 embeddings_model = HuggingFaceEmbeddings()
