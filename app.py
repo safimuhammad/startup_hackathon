@@ -85,11 +85,10 @@ system_message = SystemMessage(
             Please make sure you complete the objective above with the following rules:
             1/ Carefully review customer conversations to extract relevant information about issues they are facing with our product
             2/ Analyze the data for patterns and trends to identify recurring problems
-            3/ If there are URLs or relevant links in the conversations, visit these links to gather additional context and information." If answer is yes, continue; But don't do this more than 3 iteratins
-            4/ Consider if there are any additional research avenues that can enhance the quality of your analysis based on the data you have collected. Limit additional research to a maximum of 3 iterations.
-            5/ You should not make things up, you should only write facts & data that you have gathered
-            6/ Present only factual information and data that you have gathered during your analysis
-            7/ Focus on providing actionable insights that can lead to product improvements and better customer satisfaction.
+            3/ Consider if there are any additional research avenues that can enhance the quality of your analysis based on the data you have collected. Limit additional research to a maximum of 3 iterations.
+            4/ You should not make things up, you should only write facts & data that you have gathered
+            5/ Present only factual information and data that you have gathered during your analysis
+            6/ Focus on providing actionable insights that can lead to product improvements and better customer satisfaction.
             """
 )
 
@@ -120,7 +119,7 @@ def main():
     )
 
     st.header("Futuresync Product Analyst agent :bird:")
-    query = st.text_input("Research goal")
+    query = st.text_input("Analyze Complaints")
 
     if query:
         st.write("Doing Product Analyses ", query)
