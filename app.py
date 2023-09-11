@@ -42,7 +42,7 @@ if st.secrets:
     os.environ["OPENAI_API_KEY"] = st.secrets['OPENAI_API_KEY']
     os.environ["BROWSERLESS_API_KEY"] = st.secrets['BROWSERLESS_API_KEY']
     os.environ["SERP_API_KEY"] = st.secrets['SERP_API_KEY']
-
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # load_dotenv()
 # brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
