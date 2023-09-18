@@ -1,3 +1,4 @@
+streamlit==1.4.0
 fastapi[all]
 openai
 python-dotenv
